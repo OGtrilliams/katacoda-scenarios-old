@@ -2,7 +2,7 @@
 
 As mentioned in the previous step, `Preflight` checks can be customized to suit your organizational needs by writing custom checks in `yaml` format. Let's practice by creating our own `preflight.yaml` to suit the Katacoda environment.
 
-On the `control plane`, create a new file named `preflight.yaml` with the following content:
+On the `controlplane`, create a new file named `preflight.yaml` with the following content:
 
 ````
 apiVersion: troubleshoot.sh/v1beta2
@@ -13,11 +13,7 @@ spec:
   analyzers: []
 ````
 
-This is the starter framework of our check. You can run the check as-is with the command `kubectl preflight ./preflight.yaml`{{execute}} but you won't get much return as we have not specified any `analyzers`. 
-
-What are `analyzers`?
-
-`Analyzers` are `YAML` specifications that define a set of criteria and operations to run against data collected in a `preflight` check or support bundle. Each `analyzer` included will result in either `0` or `1` outcomes. If an `analyzer` produces zero outcomes, it will not be displayed in the results.
+This is the starter framework of our check. You can run the check as-is with the command `kubectl preflight ./preflight.yaml`{{execute}} however this won't return much useful info as we have not specified any `analyzers`. 
 
 To begin, let's edit `preflight.yaml` to add an `analyzer` under `spec:` to verify that Kubernetes is up to date:
 
@@ -44,10 +40,9 @@ spec:
 
 First, we specify the `analyzer` type, in this case it is `ClusterVersion`, which will be evaluated by the `preflight` checks once we run the updated `yaml`. In the following lines, we define `pass`, `fail`, and `warn` parameters for our check.
 
-Let's take our first check a step further by adding additional  `analyzers` for `nodes` & `CPUs`. 
+Let's take our first check a step further by adding an additional  `analyzer` for `nodeResources`. 
 
 Edit `preflight.yaml` with the following:
-
 
 ````
     - nodeResources:
@@ -63,7 +58,11 @@ Edit `preflight.yaml` with the following:
               message: This cluster has a node with enough memory and cpu cores
 ````
 
-This `analyzer` has been adjusted to verify that the Katacoda environment we are working in has deployed a single worker node with at least 4GB of RAM & 2 CPU cores available.
+The above `analyzer` will verify that the Katacoda environment we are working in has deployed a single worker node with at least 4GB of RAM & 2 CPU cores available.
+
+Now, let's save & close the file, then see the results of our check by running the command:
+
+`kubectl preflight ./preflight.yaml`{{execute}}
 
 Want more?
 

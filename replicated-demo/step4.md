@@ -6,7 +6,9 @@ A support bundle is an archive that's created in-cluster, by collecting logs and
 
 The `support-bundle` plugin collects data from the cluster, automatically redacting sensitive cluster info, then *optionally* analyzes the data to provide remediation steps.
 
-The collected data is then stashed on the client host in a `.tar.gz` archive ready to be be shared with support teams - saving precious time on walking customers through the data collection phase & streamlining the troubleshooting process. 
+The collected data is then stashed on the client host in a `.tar.gz` archive ready to be be shared with support teams - saving precious time & streamlining the troubleshooting process. 
+
+## Installation
 
 Let's start by installing `support-bundle` using the `kubectl` `krew` plugin. 
 
@@ -16,6 +18,6 @@ Now that the `support-bundle` plugin is installed, we can verify functionality b
 
 `kubectl support-bundle https://support-bundle.replicated.com`{{execute}}
 
-This will create a `.tar.gz` archive on our host with a filename like `support-bundle-$(date)` containing default cluster info along with results of a few `analyzers` we saw earlier in the exercise.
+This will create a `.tar.gz` archive on our host with a filename like `support-bundle-$(date)` containing default cluster info along with results of a few `analyzers` we saw earlier in the exercise. It will also run a `preflight` `analyzer` which can be exited with the `q` key.
 
 Or, we can skip to building our own custom `support-bundle` collectors.
