@@ -1,9 +1,7 @@
 # Good Trouble(shoot.sh)
 ## A Kubernetes framework that takes the headache out of supporting your app
 
-<center>
 ![troubleshoot.sh logo](./assets/troubleshoot.svg)
-</center>
 
 ## Presentation Abstract
 
