@@ -12,7 +12,7 @@ The collected data is then stashed on the client host in a `.tar.gz` archive rea
 
 Let's start by installing `support-bundle` using the `kubectl` `krew` plugin. 
 
-`kubectl krew install preflight`{{execute}}
+`kubectl krew install support-bundle`{{execute}}
 
 Now that the `support-bundle` plugin is installed, we can verify functionality by running an example check from `https://support-bundle.replicated.com`{{open}}:
 

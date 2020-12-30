@@ -69,7 +69,6 @@ Once the `tar` command completes, let's take a look at what the custom `collecto
 
 `cat support-bundle-*/katacoda/greetings.txt`{{execute}}
 
-What'dya find inside?? :D
-
+Surprise! That little breaking news announcement along with the new `katacoda` dir were created using a `support-bundle` `collector` appended to the bottom of `greetings.yaml`. That text can be replaced with anything, & while the example is silly it shows how powerful `support-bundle` can be.
 
 A full list of `collectors` can be viewed `https://troubleshoot.sh/docs/collect/all/`{{open}}

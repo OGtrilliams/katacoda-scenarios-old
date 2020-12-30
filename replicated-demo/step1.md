@@ -24,13 +24,19 @@ Before we get started, let's first complete setup of our `kubernetes` environmen
 
 While that's running, I'll tell you a bit about myself. 
 
+## about me
+
+My name is Treva Nichole Williams, & I'm an Open Source fangirl. I got my start as a public cloud Cloud Virtualization Admin (a fancy way of saying OpenStack sysadmin) at Rackspace back in 2011, & have made technical contributions to OpenStack Magnum (the k8s installer for OpenStack), OpenStack Packstack (the puppet RHEL POC installer), as well as written documentation for Packstack & Kata Containers. That grew into a career as an IaaS/Paas instructor/consultant/architect, which is what I'm here doing now.
+
+Now that we're all sufficiently bored, let's head back over to the demo.
+
 ## Krew
 
 Welcome back! Now that kubernetes is up & running we're ready to install [krew](https://krew.sigs.k8s.io/docs), the plugin manager for `kubectl`. Use this handy script to do the heavy lifting for you:
 
 First, download `krew-installer.sh` to the `controller` node:
 
-`curl -O krew-installer.sh https://raw.githubusercontent.com/OGtrilliams/katacoda-scenarios/main/replicated-demo/krew-installer.sh`{{execute}}
+`curl -o krew-installer.sh https://raw.githubusercontent.com/OGtrilliams/katacoda-scenarios/main/replicated-demo/krew-installer.sh`{{execute}}
 
 Now, execute the script using `BaSH`:
 
