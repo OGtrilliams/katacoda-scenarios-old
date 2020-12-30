@@ -1,6 +1,6 @@
 {
-  "title": "Replicated Demo - trilliams",
-  "description": "Demo presentation for troubleshoot.sh",
+  "title": "Good Trouble(shoot.sh)",
+  "description": "A Kubernetes framework that takes the headache out of supporting your app.",
   "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {

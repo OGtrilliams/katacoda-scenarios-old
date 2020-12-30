@@ -1,4 +1,12 @@
 # Good Trouble(shoot.sh)
-## A framework for Kubernetes that will change your life
+## A Kubernetes framework that takes the headache out of supporting your app
 
-Replicated Troubleshoot is a framework for collecting, redacting, and analyzing highly customizable diagnostic information about a Kubernetes cluster. Troubleshoot specs are created by 3rd-party application developers/maintainers and run by cluster operators in the initial and ongoing operation of those applications.
+<center>
+![troubleshoot.sh logo](./assets/troubleshoot.svg)
+</center>
+
+## Presentation Abstract
+
+Kubernetes has revolutionized the tech industry by drastically reducing costs, time, & resources needed to deploy applications. The Open Source PaaS can be customized to meet the needs of almost any organization - which is awesome, but can also cause a lot of headaches when it comes to compatibility with *your* app.
+
+Fortunately, Replicated comes to the rescue with a framework of Kubernetes tools that takes all of the guesswork out of verifying, diagnosing, & resolving issues in client environments called `troubleshoot.sh`. Join us for a **fully interactive** demo of the `troubleshoot.sh` framework, an extremely powerful but easy-to-use tool for getting your clients up & running.
